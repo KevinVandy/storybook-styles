@@ -7,7 +7,7 @@ export class StyleDecorator extends Component {
         this.story = this.props.story();
     }
 
-    componentWillReceiveProps(nextProps) {
+    getDerivedStateFromProps(nextProps) {
         if (nextProps.story !== this.props.story) {
             this.story = nextProps.story();
         }
